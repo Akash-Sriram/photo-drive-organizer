@@ -1,6 +1,16 @@
 # Photo & Drive Organizer
 
-A smart, multi-tier file organizer designed to process large archives (e.g., Google Takeout) by categorizing, deduplicating, and preserving metadata.
+A smart, modular file organizer designed to process large archives (e.g., Google Takeout) by categorizing, deduplicating, and preserving metadata.
+
+## Structure
+
+The script is split into modules for better maintainability and expandable logic:
+
+-   **`organize_photos_unified.py`**: Main orchestrator that manages full dry-runs, hashes deduplication groupings and targets layout placements.
+-   **`file_utils.py`**: Contains helper methods for **MIME-type Categorization** and MD5 hashing workflows.
+-   **`date_utils.py`**: Houses **Expandable Date Regex patterns**, JSON/HTML extractors, as well as MP4 atom writing capabilities (UTC compensation aware).
+
+---
 
 ## Features
 

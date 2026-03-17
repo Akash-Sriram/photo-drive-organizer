@@ -16,14 +16,14 @@ elif hasattr(sys.stdout, 'encoding') and sys.stdout.encoding != 'utf-8':
 from file_utils import get_file_category, get_file_hash, get_base_name
 from date_utils import get_image_info, get_date_from_filename, update_exif_date, update_mp4_metadata
 
-def main():
+def main(args_list=None):
     parser = argparse.ArgumentParser(description="Multi-tier Photo and Drive Organizer")
     parser.add_argument("--src", required=True, help="Source directories (comma-separated if multiple)")
     parser.add_argument("--dest", required=True, help="Destination directory where output folders will be placed")
     parser.add_argument("--execute", action="store_true", help="Enable to execute copy, defaults to dry-run")
     parser.add_argument("--utc-offset", default="5:30", help="UTC offset to subtract for videos (e.g., 5:30 or 0:00)")
     
-    args = parser.parse_args()
+    args = parser.parse_args(args_list)
     
     # Support Comma-Separated Multiple Paths
     src_dirs = [os.path.abspath(s.strip()) for s in args.src.split(',')]

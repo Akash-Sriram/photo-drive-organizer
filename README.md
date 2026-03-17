@@ -38,6 +38,20 @@ pip install piexif Pillow
 
 ## Usage
 
+There are two pathways to operate the tool:
+
+### 1. Simple Graphical Interface (Recommended)
+
+Double-click `gui.pyw` or run from terminal:
+```bash
+pythonw gui.pyw
+```
+This opens a friendly window enabling paths selection with directory pickers, execute toggles and live dashboard streams stream.
+
+---
+
+### 2. Command Line Interface
+
 Run the script by supplying source directories and a destination:
 
 ```bash
